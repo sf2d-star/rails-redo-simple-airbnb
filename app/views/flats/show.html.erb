@@ -1,0 +1,14 @@
+<div class="map" style="background-image: url('<%= @flat.picture_url %>')"></div>
+
+<h1><%= @flat.name %></h1>
+<p><%= @flat.address %></p>
+<h3>A bit more about this flat...</h2>
+<p><%= @flat.description %></p>
+
+<h3>Details</h3>
+<%= @flat.number_of_guests %> people
+<%= @flat.price_per_night %>€
+
+
+
+<%= link_to "Remove", flat_path(@flat), data: { turbo_method: :delete, turbo_aconfirm: "Are you sure?" } %>
